@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>春韵数字展销平台</title>
+    <!-- 这里的CSS路径必须正确 -->
+    <link rel="stylesheet" href="./css/lab2-2503-20252200114-张帅-index.css">
+</head>
+<body>
+    <!-- 头部：固定导航栏 -->
+    <header class="header">
+        <div class="logo">春韵书城</div>
+        <nav class="nav">
+            <ul>
+                <li><a href=" ">首页</a ></li>
+                <li><a href="#">图书分类</a ></li>
+                <li><a href="#">热销推荐</a ></li>
+                <li><a href="#">新书上市</a ></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主体三栏布局 -->
+    <div class="container">
+        <!-- 左侧栏：图书分类（相对定位） -->
+        <aside class="left-sidebar">
+            <h3>图书分类</h3>
+            <ul>
+                <li>文学小说</li>
+                <li>科技计算机</li>
+                <li>经济管理</li>
+                <li>少儿读物</li>
+                <li>历史人文</li>
+            </ul>
+        </aside>
+
+        <!-- 中间内容区 -->
+        <main class="main-content">
+            <!-- 图书展示区（父相子绝+悬停） -->
+            <section class="book-show">
+                <h3>图书展示区</h3>
+                <div class="book-item">
+                    <img src="./img/book1.jpg" alt="图书封面">
+                    <div class="book-info">限时特惠</div>
+                </div>
+            </section>
+
+            <!-- 热门推荐（浮动排列） -->
+            <section class="hot-recommend">
+                <h3>热门推荐</h3>
+                <div class="hot-item">《活着》</div>
+                <div class="hot-item">《三体》</div>
+                <div class="hot-item">《百年孤独》</div>
+                <div class="hot-item">《平凡的世界》</div>
+                <div class="clearfix"></div>
+            </section>
+
+            <!-- 新书上市（表格布局） -->
+            <section class="new-books">
+                <h3>新书上市</h3>
+                <table border="1">
+                    <tr>
+                        <th>书名</th>
+                        <th>作者</th>
+                        <th>价格</th>
+                    </tr>
+                    <tr>
+                        <td>《春》</td>
+                        <td>朱自清</td>
+                        <td>¥29.9</td>
+                    </tr>
+                    <tr>
+                        <td>《朝花夕拾》</td>
+                        <td>鲁迅</td>
+                        <td>¥35.0</td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+
+        <!-- 右侧栏：促销信息（固定定位） -->
+        <aside class="right-sidebar">
+            <h3>促销活动</h3>
+            <p>满100减20</p >
+            <p>全场包邮</p >
+            <p>限时秒杀</p >
+        </aside>
+    </div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    line-height: 1.6;
+    padding-top: 60px;
+    font-family: "微软雅黑", sans-serif;
+}
+
+/* 1. 头部导航：固定定位 + 浮动布局 */
+.header {
+    position: fixed; /* 固定定位：头部始终在顶部 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #2c3e50;
+    color: white;
+    padding: 0 20px;
+    border-bottom: 2px solid #3498db; /* 盒子模型：边框 */
+}
+.logo {
+    float: left; /* 浮动布局：Logo居左 */
+    font-size: 24px;
+    line-height: 60px;
+    font-weight: bold;
+    margin-left: 20px; /* 盒子模型：外边距 */
+}
+.nav {
+    float: right; /* 浮动布局：导航居右 */
+}
+.nav li {
+    float: left; /* 菜单横向浮动排列 */
+    margin-left: 30px; /* 盒子模型：外边距 */
+    line-height: 60px;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer; /* 鼠标指针效果 */
+}
+.nav a:hover {
+    color: #3498db; /* 鼠标悬停变色 */
+}
+
+/* 2. 主体三栏浮动布局 */
+.container {
+    width: 1200px;
+    margin: 20px auto; /* 盒子模型：外边距，容器居中 */
+    overflow: hidden; /* 清除浮动 */
+}
+
+/* 左侧栏：相对定位 */
+.left-sidebar {
+    float: left; /* 浮动布局：左栏 */
+    width: 200px;
+    background: #f5f5f5;
+    padding: 20px; /* 盒子模型：内边距 */
+    border: 1px solid #ddd; /* 盒子模型：边框 */
+    margin-right: 20px; /* 盒子模型：外边距 */
+    position: relative; /* 相对定位 */
+    top: 0;
+}
+.left-sidebar h3 {
+    margin-bottom: 15px;
+}
+.left-sidebar li {
+    margin: 10px 0;
+    cursor: pointer;
+}
+.left-sidebar li:hover {
+    color: #3498db;
+}
+
+/* 中间内容区 */
+.main-content {
+    float: left; /* 浮动布局：中间栏 */
+    width: 700px;
+}
+
+/* 图书展示区：父相子绝 + 悬停效果 */
+.book-show {
+    margin-bottom: 30px;
+}
+.book-item {
+    position: relative; /* 父相：父元素相对定位 */
+    width: 200px;
+    height: 280px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    cursor: pointer;
+}
+.book-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.book-info {
+    position: absolute; /* 子绝：子元素绝对定位 */
+    bottom: -50px; /* 默认隐藏 */
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.3s ease;
+}
+.book-item:hover .book-info {
+    bottom: 0; /* 悬停时滑入显示 */
+}
+
+/* 热门推荐：浮动排列 */
+.hot-recommend {
+    margin-bottom: 30px;
+    overflow: hidden; /* 清除浮动 */
+}
+.hot-item {
+    float: left;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #e8f4fc;
+    border: 1px solid #3498db;
+    margin: 10px;
+    cursor: pointer;
+}
+.hot-item:hover {
+    background: #3498db;
+    color: white;
+}
+
+/* 新书上市：表格布局 */
+.new-books table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.new-books th, .new-books td {
+    border: 1px solid #ddd;
+    padding: 10px; /* 盒子模型：内边距 */
+    text-align: center;
+}
+.new-books th {
+    background: #f5f5f5;
+}
+
+/* 右侧栏：固定定位 */
+.right-sidebar {
+    position: fixed; /* 固定定位：始终停在右侧 */
+    right: 50px;
+    top: 100px;
+    width: 200px;
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 20px; /* 盒子模型：内边距 */
+    cursor: pointer;
+}
+.right-sidebar h3 {
+    margin-bottom: 15px;
+}
+
+/* 清除浮动 */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
